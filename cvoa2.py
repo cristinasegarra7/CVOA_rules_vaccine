@@ -84,6 +84,7 @@ class CVOA:
             # Step 5.1 If the individual belongs to the death part, then die!
             if i >= idx_deaths:
                 self.deaths.append(x)
+                self.infected.remove(x)
             else:
                 # Step 5.2 Determine the number of new infected individuals.
                 if i < idx_super_spreader:  # This is the super-spreader!
