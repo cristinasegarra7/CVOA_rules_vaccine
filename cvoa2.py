@@ -112,7 +112,7 @@ class CVOA:
                             if random.random() < self.P_REINFECTION:
                                 new_infected_list.append(new_infected)
                                 self.recovered.remove(new_infected)
-                    elif time < self.VACCINATION: # After SOCIAL_DISTANCING iterations, there is a P_ISOLATION of not being
+                    elif time < self.VACCINATION: # After SOCIAL_DISTANCING iterations, there is a P_ISOLATION of not being infected
                         if random.random() > self.P_ISOLATION:
                             if new_infected not in self.deaths and new_infected not in self.infected and new_infected not in new_infected_list and new_infected not in self.recovered:
                                 new_infected_list.append(new_infected)
